@@ -1,0 +1,127 @@
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #000;
+}
+
+#gameArea {
+width: 100vw; /* Use 100% da largura da viewport */
+height: 100vh; /* Use 100% da altura da viewport */
+position: fixed; /* Mudança para 'fixed' para cobrir toda a tela */
+top: 0;
+left: 0;
+overflow: hidden;
+}
+
+#player, .obstacle, #collectible {
+width: 40px;
+height: 40px;
+position: absolute;
+z-index: 2;
+}
+
+#player {
+background-image: url('https://th.bing.com/th/id/OIP.xYKBBust9kFL5nxAa02plgHaHa?rs=1&pid=ImgDetMain');
+background-size: cover;
+}
+
+.obstacle {
+background-image: url('https://img.freepik.com/vetores-gratis/personagem-de-desenho-animado-de-monstro-alienigena-rosa-alegre-com-a-boca-aberta_1308-160159.jpg?t=st=1710384066~exp=1710387666~hmac=7ddcfa2bb60377246bae041d9c2f81b0a31ee47e96d489d4f4b4479f2cdf0c77&w=996');
+background-size: cover;
+}
+
+#collectible {
+background-image: url('https://w7.pngwing.com/pngs/705/367/png-transparent-gift-wrapping-fiscal-transparency-box-gift-box-miscellaneous-ribbon-image-file-formats.png');
+background-size: cover;
+}
+
+#healthBar, #armorBar {
+position: fixed;
+width: 200px; /* Largura ajustada para 200px */
+height: 20px;
+border: 1px solid #333;
+background-color: #222;
+}
+
+#healthBar {
+bottom: 25px; /* Posicionamento ajustado */
+left: calc(50% - 205px); /* Ajuste para a esquerda da metade da tela */
+}
+
+#armorBar {
+bottom: 25px; /* Posicionamento ajustado para ficar na mesma altura da barra de saúde */
+left: calc(50% + 5px); /* Ajuste para a direita da metade da tela */
+}
+
+#health, #armor {
+height: 100%;
+}
+
+#health {
+background-color: #4caf50;
+}
+
+#armor {
+background-color: #ff69b4; /* Cor rosa para o colete */
+}
+
+#damageDisplay, #levelDisplay, #console {
+position: fixed;
+}
+
+#experienceBar {
+position: fixed;
+left: 50%;
+transform: translateX(-50%);
+bottom: 75px;
+width: 400px;
+height: 20px;
+border: 1px solid #333;
+background-color: #222;
+display: flex; /* Adicionado para permitir o alinhamento interno */
+align-items: center; /* Centraliza verticalmente o texto dentro da barra */
+justify-content: center; /* Centraliza horizontalmente o texto dentro da barra */
+color: white; /* Define a cor do texto para branco */
+}
+
+#levelDisplay {
+position: absolute; /* Permite posicionamento específico dentro da barra */
+width: 100%; /* Garante que ocupe toda a largura da barra */
+text-align: center; /* Centraliza o texto horizontalmente */
+color: white; /* Assegura que o texto seja branco, se não estiver já */
+font-weight: bold; /* Opcional: Deixa o texto em negrito */
+}
+
+#experience {
+height: 100%;
+background-color: #2196f3;
+position: absolute; /* Ajuste para sobrepor corretamente */
+top: 0;
+left: 0;
+}
+
+#console {
+bottom: 0;
+left: 0;
+width: 100%;
+padding: 10px;
+background-color: rgba(0, 0, 0, 0.8);
+color: #fff;
+font-size: 16px;
+overflow-y: auto;
+max-height: 100px;
+}
+
+.rounded-circle {
+border-radius: 50%;
+}
+
+#alertContainer {
+position: fixed; /* ou absolute, dependendo da estrutura */
+top: 20px; /* Ajuste a posição vertical conforme necessário */
+left: 50%;
+transform: translateX(-50%);
+width: auto; /* ou uma largura específica */
+z-index: 1000; /* Garante que apareça acima dos outros elementos */
+}

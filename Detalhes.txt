@@ -1,0 +1,3 @@
+Atualização 1°:
+
+Jogo criado em formato beta, apenas dano, colete, vida e personagem criado.
